@@ -1,0 +1,123 @@
+/* Navbar styles */
+.buttons {
+    background-color: skyblue; /* Sky blue background */
+    display: flex;
+    justify-content: center; /* Centers the navbar items */
+    padding: 10px 0;
+}
+
+.buttons a {
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from links */
+    padding: 14px 20px; /* Adds space around the links */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Makes the text bold */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.buttons a:hover {
+    background-color: #0099cc; /* Darker blue when hovering */
+}
+
+
+
+
+
+
+
+
+
+Dinning Room<div class="products">
+            <div class="product">
+                <img src="./dinning/int1.jpg" alt="Chair 1">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int2.jpg" alt="Chair 2">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int3.jpg" alt="Chair 3">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int4.jpg" alt="Chair 4">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int5.jpg" alt="Chair 5">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int6.jpg" alt="Chair 6">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int7.jpg" alt="Chair 7">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int8.jpg" alt="Chair 8">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int9.jpg" alt="Chair 9">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int10.jpg" alt="Chair 10">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int11.jpg" alt="Chair 11">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int13.jpg" alt="Chair 12">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int6.jpg" alt="Chair 6">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int7.jpg" alt="Chair 7">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int8.jpg" alt="Chair 8">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int9.jpg" alt="Chair 9">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int10.jpg" alt="Chair 10">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int11.jpg" alt="Chair 11">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            
+            </div>
+        </div>

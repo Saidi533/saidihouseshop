@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- bootstrap link -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+     <!-- bootstrap link -->
+     
+     <!-- icons -->
+     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+     <!-- icons -->
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store | SAIDI COMPANY LTD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        /* navbar */
+#navbar-color{
+    background-color: rgba(238,224,208);
+}
+.navbar-nav{
+    margin: auto;
+}
+.nav-link{
+    margin-left: 30px;
+    font-weight: bold;
+    color: black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.nav-link:hover{
+    color: hsl(39, 90%, 49%);
+}
+/* navbar */
+
+
+/* Navbar styles */
+.buttons {
+    background-color: skyblue; /* Sky blue background */
+    display: flex;
+    justify-content: center; /* Centers the navbar items */
+    padding: 10px 0;
+}
+
+.buttons {
+    background-color: rgb(75, 198, 247); /* Sky blue background */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from links */
+    padding: 14px 20px; /* Adds space around the links */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Makes the text bold */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    border: none;
+}
+
+.buttons:hover {
+    background-color: #0099cc; /* Darker blue when hovering */
+}
+        .navbar button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .navbar button:hover {
+            background-color: #555;
+        }
+        .products-container {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* footer */
+    /* Footer styles */
+    footer {
+        
+        font-family: "Comic Sans MS", "Chalkboard", sans-serif; /* Cartoon-style font */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: linear-gradient(45deg, #1c2833, #1b4f72);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 90px;
+      }
+  
+      footer h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+  
+      footer .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+  
+      footer .section {
+        flex: 1;
+        min-width: 150px;
+        text-align: left;
+      }
+  
+      footer .section h4 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+  
+      footer .section p {
+        list-style:circle;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+  
+      footer .section ul li {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+  
+      footer .section ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+      }
+  
+      footer .section ul li a:hover {
+        text-decoration: underline;
+      }
+  
+      footer .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+      }
+  
+      footer .social-icons a {
+        color: white;
+        font-size: 20px;
+        transition: transform 0.3s;
+      }
+  
+      footer .social-icons a:hover {
+        transform: scale(1.2);
+      }
+  
+      footer .bottom-bar {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 10px;
+        font-size: 12px;
+      }
+  
+      footer .back-to-top {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        background: #382428;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-size: 16px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        display: none;
+      }
+  
+      footer .back-to-top:hover {
+        background: #4d3c43;
+      }
+  
+      @media (max-width: 768px) {
+        footer .content {
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        footer .section {
+          min-width: 100%;
+          text-align: center;
+        }
+      }
+
+/* footer */
+    </style>
+</head>
+<div>
+    <nav class="navbar navbar-expand-md" id="navbar-color">
+        <div class="container">
+         <!-- Toggler/collapsibe Button -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+           <span><i><img src="./image/menu.png" alt="" width="30px"></i></span>
+         </button>
+       
+         <!-- Navbar links -->
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+           <ul class="navbar-nav">
+             <li class="nav-item">
+               <a class="nav-link" href="index.html">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="Shop.html">Shop</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="Contact.html">Contact</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="Support.html">Support</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="FAQ.html">FAQs</a>
+                 </li>
+           </ul>
+         </div>
+        </div> 
+       </nav>
+
+       
+       
+   <div class="buttons">
+    <button onclick="showCategory('beds')">Beds</button>
+    <button onclick="showCategory('chairs')">Chairs</button>
+    <button onclick="showCategory('kitchen')">Kitchen</button>
+    <button onclick="showCategory('office')">Office</button>
+    <button onclick="showCategory('furniture')">Other Furniture</button>
+</div>
+    
+    <div id="beds" class="products-container active">
+        <div class="products">
+            <div class="product">
+                <img src="./IBITANDA/ibt1.jpg" alt="Bed 1">
+                <h3>Luxury King Bed</h3>
+                <p>$500</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt2.jpg" alt="Bed 2">
+                <h3>Wooden Queen Bed</h3>
+                <p>$400</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt3.jpg" alt="Bed 3">
+                <h3>Modern Single Bed</h3>
+                <p>$300</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt4.jpg" alt="Bed 1">
+                <h3>Luxury King Bed</h3>
+                <p>$500</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt5.jpg" alt="Bed 2">
+                <h3>Wooden Queen Bed</h3>
+                <p>$400</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt6.jpg" alt="Bed 3">
+                <h3>Modern Single Bed</h3>
+                <p>$300</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt7.jpg" alt="Bed 1">
+                <h3>Luxury King Bed</h3>
+                <p>$500</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt8.jpg" alt="Bed 2">
+                <h3>Wooden Queen Bed</h3>
+                <p>$400</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt9.jpg" alt="Bed 3">
+                <h3>Modern Single Bed</h3>
+                <p>$300</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt10.jpg" alt="Bed 1">
+                <h3>Luxury King Bed</h3>
+                <p>$500</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt11.jpg" alt="Bed 2">
+                <h3>Wooden Queen Bed</h3>
+                <p>$400</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt12.jpg" alt="Bed 3">
+                <h3>Modern Single Bed</h3>
+                <p>$300</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt13.jpg" alt="Bed 1">
+                <h3>Luxury King Bed</h3>
+                <p>$500</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt14.jpg" alt="Bed 2">
+                <h3>Wooden Queen Bed</h3>
+                <p>$400</p>
+                <p><button>Buy Now</button></p>
+            </div>
+            <div class="product">
+                <img src="./IBITANDA/ibt15.jpg" alt="Bed 3">
+                <h3>Modern Single Bed</h3>
+                <p>$300</p>
+                <p><button>Buy Now</button></p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="chairs" class="products-container">
+        Sofa<div class="products">
+            <div class="product">
+                <img src="./sofa/ht6.jpg" alt="Chair 1">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht9.jpg" alt="Chair 2">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht10.jpg" alt="Chair 3">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht11.jpg" alt="Chair 1">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht13.jpg" alt="Chair 2">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht14.jpg" alt="Chair 3">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht15.jpg" alt="Chair 1">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht16.jpg" alt="Chair 2">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./sofa/ht18.jpg" alt="Chair 3">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+        </div>
+
+        Plastic chairs<div class="products">
+            <div class="product">
+                <img src="./plastic/pt1.jpg" alt="Chair 1">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt2.jpg" alt="Chair 2">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt3.jpg" alt="Chair 3">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt4.jpg" alt="Chair 4">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt5.jpg" alt="Chair 5">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pi10.jpg" alt="Chair 6">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt7.jpg" alt="Chair 7">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt8.jpg" alt="Chair 8">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt9.jpg" alt="Chair 9">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt11.jpg" alt="Chair 10">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt12.jpg" alt="Chair 11">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt14.jpg" alt="Chair 12">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt15.jpg" alt="Chair 13">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./plastic/pt16.jpg" alt="Chair 14">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+        </div>
+    
+
+        Dinning Room<div class="products">
+            <div class="product">
+                <img src="./dinning/int1.jpg" alt="Chair 1">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int2.jpg" alt="Chair 2">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int3.jpg" alt="Chair 3">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int4.jpg" alt="Chair 4">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int5.jpg" alt="Chair 5">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int6.jpg" alt="Chair 6">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int7.jpg" alt="Chair 7">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int8.jpg" alt="Chair 8">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int9.jpg" alt="Chair 9">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int10.jpg" alt="Chair 10">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int11.jpg" alt="Chair 11">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int13.jpg" alt="Chair 12">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int6.jpg" alt="Chair 6">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int7.jpg" alt="Chair 7">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int8.jpg" alt="Chair 8">
+                <h3>Recliner Chair</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int9.jpg" alt="Chair 9">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int10.jpg" alt="Chair 10">
+                <h3>Dining Chair</h3>
+                <p>$80</p>
+            </div>
+            <div class="product">
+                <img src="./dinning/int11.jpg" alt="Chair 11">
+                <h3>Office Chair</h3>
+                <p>$120</p>
+            </div>
+            
+            </div>
+        </div>
+
+
+    <div id="kitchen" class="products-container">
+        <div class="products">
+            <div class="product">
+                <img src="kitchen1.jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="kitchen2.jpg" alt="Kitchen 2">
+                <h3>Wooden Cabinets</h3>
+                <p>$450</p>
+            </div>
+            <div class="product">
+                <img src="kitchen3.jpg" alt="Kitchen 3">
+                <h3>Stainless Steel Sink</h3>
+                <p>$250</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="office" class="products-container">
+        <div class="products">
+            <div class="product">
+                <img src="./office/off (1).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (2).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (3).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (4).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (5).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (6).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (7).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (8).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (10).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (11).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (12).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (13).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (14).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (15).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (16).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (17).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (18).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (19).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (20).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (21).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+            <div class="product">
+                <img src="./office/off (22).jpg" alt="Kitchen 1">
+                <h3>Modern Kitchen Set</h3>
+                <p>$600</p>
+            </div>
+        </div>
+    </div>
+    
+     <!-- footer -->
+     <footer>
+        <h3>SAIDI COMPANY Ltd</h3>
+        <div class="content">
+          <!-- Quick Links -->
+          <div class="section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Contact Us -->
+          <div class="section">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>Email: saidiniyigena98@gmail.com</li>
+              <li>Phone: +250 795 604 339</li>
+              <li>Address: Bugarama, Rusizi, Rwanda</li>
+              <li>website family: SEBASAZA</li>
+            </ul>
+          </div>
+      
+          <!-- Developers -->
+          <div class="section">
+            <h4>Developed By</h4>
+            <p><marquee width="60%">SAIDI  NIYIGENA .</marquee></p>
+          </div>
+        </div>
+      
+        <!-- Social Media Links -->
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class='bx bxl-facebook'></i></a>
+          <a href="#" title="Twitter"><i class='bx bxl-twitter'></i></a>
+          <a href="#" title="Instagram"><i class='bx bxl-instagram'></i></a>
+          <a href="#" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      
+        <!-- Bottom Bar -->
+        <div class="bottom-bar">
+          <p>© 2025 SAIDI COMPANY Ltd. All rights reserved.</p>
+        </div>
+      
+        <!-- Back to Top Button -->
+        <div class="back-to-top" onclick="scrollToTop()">↑</div>
+      </footer>
+    <script>
+        function showCategory(category) {
+            let categories = document.querySelectorAll('.products-container');
+            categories.forEach(cat => cat.classList.remove('active'));
+            document.getElementById(category).classList.add('active');
+        }
+
+         // Show Back to Top button on scroll
+ window.onscroll = function() {
+    const backToTop = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  };
+
+
+    // Smooth scroll to top
+    function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+              {pageLanguage: 'en'},
+              'google_translate_element'
+          );
+      } 
+
+    </script>
+</body>
+</html>
